@@ -39,8 +39,8 @@ O monitoramento local exige que o Prometheus (isolado na rede virtual do Docker)
 
 2. Configure as credenciais do MikroTik:
 ```
-# Copie o template de exemplo para criar o arquivo real de configuração local
-cp mktxp/mktxp.example.conf mktxp/mktxp.conf
+    # Copie o template de exemplo para criar o arquivo real de configuração local
+    cp mktxp/mktxp.example.conf mktxp/mktxp.conf
 ```
 
 3. Inicie os containers em segundo plano:
