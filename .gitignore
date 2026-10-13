@@ -12,4 +12,4 @@ Thumbs.db
 *~
 
 # Ignore mikrotik file
-mikrotik/config.yml
+mktxp/mktxp.conf
