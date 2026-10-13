@@ -9,6 +9,7 @@ Uma stack de monitoramento self-hosted baseada em Docker, desenvolvida para cole
 * **Grafana:** Plataforma de visualização de dados (porta `3000`).   
 * **Prometheus:** Banco de dados de séries temporais e motor de coleta de métricas (porta `9090`).  
 * **Node Exporter:** Agente que exporta as métricas de hardware e do sistema operacional da máquina host.   
+* **mktxp (MikroTik Exporter):** Agente em Python que extrai métricas do RouterOS via API (porta `8728`) e as expõe para o Prometheus (porta `49090`).
 
 ## Estrutura de Volumes e Persistência     
 
@@ -17,6 +18,7 @@ Para garantir que as configurações e os históricos de métricas não sejam pe
 * `./data/grafana:/var/lib/grafana` - Armazena painéis, usuários, plugins e configurações internas do Grafana.    
 * `./data/prometheus_data:/prometheus` - Armazena o banco de dados de séries temporais (TSDB) do Prometheus.    
 * `./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro` - Mapeia o arquivo de configuração do Prometheus em modo somente leitura (Read-Only).     
+* `./mktxp/mktxp.conf:/etc/mktxp/mktxp.conf` - Mapeia o arquivo de configuração e credenciais do exporter do MikroTik.
 
 > **Nota:** A pasta `data/` e o arquivo local `mktxp/mktxp.conf` estão no `.gitignore` e não são versionada no repositório para não expor arquivos sensiveis. O Docker criará essa pasta automaticamente na primeira execução e você só precisará atualizar suas credenciais no arquivo .conf.    
 
