@@ -11,8 +11,7 @@ scrape_configs:
     static_configs:
       - targets: ['host.docker.internal:9100']
 
-#remote_write:
-  #- url: '<Your Prometheus remote_write endpoint>'
-    #basic_auth:
-      #username: '<Your Grafana Username>'
-     #password: '<Your Grafana Cloud Access Policy Token>'
+  - job_name: 'mikrotik'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['mktxp:49090']
