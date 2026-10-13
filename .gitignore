@@ -1,7 +1,12 @@
-# Ignorar dados persistentes dos containers
+# Persistent container data
 data/
 
-# Ignorar arquivos temporários e de sistema
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Temporary and system files
 .DS_Store
 Thumbs.db
 *~
