@@ -1,0 +1,7 @@
+# Ignorar dados persistentes dos containers
+data/
+
+# Ignorar arquivos temporários e de sistema
+.DS_Store
+Thumbs.db
+*~
