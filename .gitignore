@@ -10,3 +10,6 @@ data/
 .DS_Store
 Thumbs.db
 *~
+
+# Ignore mikrotik file
+mikrotik/config.yml
