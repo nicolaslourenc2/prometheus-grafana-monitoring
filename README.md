@@ -1,6 +1,4 @@
-# prometheus-grafana-monitoring
-
-# Network & Host Monitoring Stack    
+# mikrotik-prometheus-grafana
 
 Uma stack de monitoramento self-hosted baseada em Docker, desenvolvida para coletar, armazenar e visualizar métricas de rede e hardware. O projeto utiliza Prometheus para coleta de dados e Grafana para visualização, com foco na facilidade de implantação via Docker Compose.    
 
