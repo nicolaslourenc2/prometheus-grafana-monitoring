@@ -191,16 +191,6 @@ curl -s http://localhost:49090/metrics | head
 2. Em *Connections → Data sources*, adicione o Prometheus com a URL `http://prometheus:9090`.
 3. Em *Dashboards → Import*, importe o dashboard **MikroTik MKTXP Exporter** (ID `13679`) e selecione o datasource criado.
 
-## Solução de problemas
-
-| Sintoma | Causa provável |
-| --- | --- |
-| Erro de certificado nos logs do `mktxp` | `ca-bundle.crt` ausente, não montado ou sem a CA que assinou o certificado do roteador |
-| Falha de hostname/SAN | O `hostname` do `mktxp.conf` é diferente do CN/SAN do certificado (por exemplo, IP no config e nome no certificado) |
-| Certificado "expirado" ou "ainda não válido" | Relógio/NTP do MikroTik incorreto |
-| Conexão recusada na `8729` | `api-ssl` desabilitado, sem certificado associado ou restrito por `address`/firewall a outro IP |
-| Sem métricas no Grafana | Datasource do Prometheus não configurado ou alvo do `mktxp` fora do ar em *Status → Targets* |
-
 ## Licença
 
 Distribuído sob a licença MIT. Veja o arquivo [LICENSE](LICENSE).
