@@ -60,5 +60,6 @@ services:
       - "49090:49090"
     volumes:
       - ./mktxp/mktxp.conf:/etc/mktxp/mktxp.conf
+      - ./mktxp/ca-bundle.crt:/etc/mktxp/ca-bundle.crt:ro
     networks:
       - monitoring
