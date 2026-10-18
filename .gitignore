@@ -13,3 +13,14 @@ Thumbs.db
 
 # Ignore mikrotik file
 mktxp/mktxp.conf
+
+
+# certificates and keys (CA and certs generate on MikroTik)
+mktxp/*.crt
+mktxp/*.cer
+mktxp/*.pem
+mktxp/*.key
+mktxp/*.p12
+*.key
+*.pem
+*.p12
